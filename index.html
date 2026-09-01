@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Likith Prem — M.Tech (Information Security) student at NIT Calicut. Full-stack developer, applied ML engineer, and systems security enthusiast — React.js, Node.js, Java, PyTorch, Docker &amp; Linux.">
+    <meta name="keywords" content="Likith Prem, portfolio, NIT Calicut, M.Tech, information security, software engineer, machine learning engineer, ML, AI, web developer, full stack developer, Hyderabad, Java, Python, C++, React, Node.js, MongoDB, PyTorch, XGBoost, Docker, Linux">
+    <meta name="author" content="Likith Prem">
+    <meta property="og:title" content="Likith Prem — Software Engineer & ML Engineer, NIT Calicut">
+    <meta property="og:description" content="Portfolio of Likith Prem — M.Tech (Information Security) student at NIT Calicut and B.Tech CSE graduate, building full-stack web platforms (React.js, Node.js, Java), applied ML systems (PyTorch, XGBoost), and systems security projects (Docker, Linux, C).">
+    <title>Likith Prem — Software Engineer & ML Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="C (1).png">
+    <link rel="apple-touch-icon" href="C (1).png">
+    <meta property="og:image" content="mypic.jpg">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Likith Prem — Software Engineer & ML Engineer">
+    <meta name="twitter:description" content="Full-stack developer, applied ML engineer & systems security enthusiast — React.js, Node.js, Java, PyTorch, Docker.">
+    <meta name="twitter:image" content="mypic.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <div id="scroll-progress"></div>
+
+    <!-- ========== HERO / HEADER ========== -->
+    <header id="header">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+
+        <nav id="site-nav">
+            <div class="nav-inner">
+                <a href="#header" class="logo-text" id="nav-logo" aria-label="Likith Prem"><span class="logo-l">L</span>ikith<span class="logo-dot">.</span></a>
+                <ul id="sidemenu">
+                    <li><a href="#header" id="nav-home">Home</a></li>
+                    <li><a href="#about" id="nav-about">About</a></li>
+                    <li><a href="#services" id="nav-services">Services</a></li>
+                    <li><a href="#portfolio" id="nav-portfolio">Portfolio</a></li>
+                    <li><a href="#contact" id="nav-contact">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" id="close-menu-btn" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" id="open-menu-btn" onclick="openmenu()"></i>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="header-text">
+                <p class="hero-tag hero-anim" style="animation-delay:0.1s">✦ Available for opportunities</p>
+                <h1 class="hero-anim" style="animation-delay:0.25s">Hello, I'm<br><span class="gradient-text" id="typed-name">Likith Prem</span></h1>
+                <p class="hero-subtitle hero-anim" style="animation-delay:0.4s"><span id="typed-role"></span><span class="cursor-blink">|</span></p>
+                <div class="hero-cta hero-anim" style="animation-delay:0.55s">
+                    <a href="#portfolio" class="btn btn-primary" id="view-work-btn">View My Work</a>
+                    <a href="#contact" class="btn btn-outline" id="contact-hero-btn">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-dot"></div>
+        </div>
+    </header>
+
+    <!-- ========== ABOUT ========== -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1 reveal">
+                    <div class="profile-glow-wrapper">
+                        <img src="mypic.jpg" alt="Likith Prem" class="profile-img">
+                        <div class="profile-glow"></div>
+                    </div>
+                </div>
+                <div class="about-col-2 reveal">
+                    <h2 class="section-label">Who Am I</h2>
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="about-description">M.Tech (Information Security) student at NIT Calicut, researching hallucination localization in LLM-generated code and probing system privilege boundaries across Docker, Linux and C. B.Tech CSE graduate who works across the stack — full-stack platforms in React.js, Node.js and Java, and applied ML systems in PyTorch and XGBoost, from a clinical risk-prediction model at 0.91 ROC-AUC to autonomous log-monitoring agents. Eager to bring that range to a team building real products.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" id="tab-skills-btn" onclick="opentab('skills', this)">
+                            <i class="fa-solid fa-code"></i> Skills
+                        </p>
+                        <p class="tab-links" id="tab-edu-btn" onclick="opentab('education', this)">
+                            <i class="fa-solid fa-graduation-cap"></i> Education
+                        </p>
+                        <p class="tab-links" id="tab-ach-btn" onclick="opentab('achievements', this)">
+                            <i class="fa-solid fa-trophy"></i> Achievements
+                        </p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <div class="skills-interactive">
+                            <div class="skills-categories">
+                                <div class="skill-cat active-cat" data-skill-cat="languages">Languages</div>
+                                <div class="skill-cat" data-skill-cat="frontend">Frontend</div>
+                                <div class="skill-cat" data-skill-cat="backend">Backend &amp; Databases</div>
+                                <div class="skill-cat" data-skill-cat="ml">Machine Learning</div>
+                                <div class="skill-cat" data-skill-cat="systems">Systems &amp; Security</div>
+                                <div class="skill-cat" data-skill-cat="parallel">Parallel Programming &amp; Compilers</div>
+                                <div class="skill-cat" data-skill-cat="tools">Tools &amp; Version Control</div>
+                            </div>
+                            <div class="skills-display">
+                                <div class="skill-tags skill-panel active-skill-panel" data-panel="languages">
+                                    <span class="tag">Python</span>
+                                    <span class="tag">Java</span>
+                                    <span class="tag">C</span>
+                                    <span class="tag">C++</span>
+                                </div>
+                                <div class="skill-tags skill-panel" data-panel="frontend">
+                                    <span class="tag">JavaScript</span>
+                                    <span class="tag">HTML5</span>
+                                    <span class="tag">CSS3</span>
+                                    <span class="tag">React.js</span>
+                                </div>
+                                <div class="skill-tags skill-panel" data-panel="backend">
+                                    <span class="tag">Node.js</span>
+                                    <span class="tag">Express.js</span>
+                                    <span class="tag">SQL</span>
+                                    <span class="tag">MongoDB</span>
+                                </div>
+                                <div class="skill-tags skill-panel" data-panel="ml">
+                                    <span class="tag">PyTorch</span>
+                                    <span class="tag">XGBoost</span>
+                                    <span class="tag">Scikit-learn</span>
+                                    <span class="tag">LLMs</span>
+                                    <span class="tag">GenAI</span>
+                                    <span class="tag">Agentic AI Systems</span>
+                                </div>
+                                <div class="skill-tags skill-panel" data-panel="systems">
+                                    <span class="tag">Docker</span>
+                                    <span class="tag">Linux</span>
+                                    <span class="tag">GDB</span>
+                                    <span class="tag">Bash</span>
+                                </div>
+                                <div class="skill-tags skill-panel" data-panel="parallel">
+                                    <span class="tag">OpenMP</span>
+                                    <span class="tag">LLVM</span>
+                                </div>
+                                <div class="skill-tags skill-panel" data-panel="tools">
+                                    <span class="tag">Git</span>
+                                    <span class="tag">GitHub</span>
+                                    <span class="tag">VS Code</span>
+                                    <span class="tag">Google Colab</span>
+                                    <span class="tag">Jupyter Notebook</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul class="timeline">
+                            <li class="timeline-item">
+                                <span class="timeline-label">2025 – Present</span>
+                                <h4>M.Tech — CSE (Information Security) <span class="badge grade">6.98 CGPA</span></h4>
+                                <p>National Institute of Technology (NIT) Calicut</p>
+                            </li>
+                            <li class="timeline-item">
+                                <span class="timeline-label">2020 – 2024</span>
+                                <h4>B.Tech — Computer Science &amp; Engineering <span class="badge grade">8.30 CGPA</span></h4>
+                                <p>Gokaraju Rangaraju Institute of Engineering &amp; Technology (GRIET)</p>
+                            </li>
+                            <li class="timeline-item">
+                                <span class="timeline-label">2017 – 2019</span>
+                                <h4>Intermediate | Class XII <span class="badge grade">84.9%</span></h4>
+                                <p>Sri Chaitanya Junior Kalasala</p>
+                            </li>
+                            <li class="timeline-item">
+                                <span class="timeline-label">2017</span>
+                                <h4>SSC | Class X <span class="badge grade">9.0 CGPA</span></h4>
+                                <p>Gowtham Model School</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="achievements">
+                        <div class="achievements-grid">
+                            <div class="achieve-card">
+                                <h3 data-count-to="300" data-suffix="+">0</h3>
+                                <p>Problems solved across LeetCode &amp; GeeksforGeeks</p>
+                            </div>
+                            <div class="achieve-card">
+                                <h3>5★</h3>
+                                <p>HackerRank Problem Solving badge</p>
+                            </div>
+                            <div class="achieve-card">
+                                <h3 data-count-to="0.91" data-decimals="2">0</h3>
+                                <p>ROC-AUC on hepatic fibrosis risk-prediction model</p>
+                            </div>
+                            <div class="achieve-card">
+                                <h3 data-count-to="81.9" data-decimals="1" data-suffix="%">0</h3>
+                                <p>Sensitivity across a 38,438-patient NAFLD cohort</p>
+                            </div>
+                        </div>
+                        <div class="skill-group" style="margin-top:28px">
+                            <h4>AICTE–EduSkills</h4>
+                            <div class="skill-tags">
+                                <span class="tag">AWS Cloud Virtual Internship · 10 Weeks</span>
+                            </div>
+                        </div>
+                        <div class="skill-group" style="margin-top:20px">
+                            <h4>Relevant Coursework</h4>
+                            <div class="skill-tags">
+                                <span class="tag">DBMS</span>
+                                <span class="tag">OOPs</span>
+                                <span class="tag">Operating Systems</span>
+                                <span class="tag">Computer Networks</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SERVICES ========== -->
+    <section id="services">
+        <div class="container">
+            <h2 class="section-label reveal">What I Offer</h2>
+            <h1 class="sub-title reveal">My Services</h1>
+            <div class="services-list">
+                <div class="service-card reveal" id="service-webdev">
+                    <div class="service-icon-wrap">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h2>Web Development</h2>
+                    <p>Crafting pixel-perfect, responsive websites and building scalable web applications with React.js, Node.js, Express.js, and MongoDB — from clean interfaces to a performant, maintainable backend.</p>
+                    <div class="service-line"></div>
+                </div>
+                <div class="service-card reveal" id="service-ml">
+                    <div class="service-icon-wrap">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h2>Machine Learning &amp; Data Science</h2>
+                    <p>Designing and training models in PyTorch and XGBoost for real-world prediction tasks — from clinical risk scoring to intelligent, autonomous agents.</p>
+                    <div class="service-line"></div>
+                </div>
+                <div class="service-card reveal" id="service-security">
+                    <div class="service-icon-wrap">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h2>Systems &amp; Security</h2>
+                    <p>Tracing privilege and control-flow across Docker, Linux and C — understanding how systems break so I can help build ones that don't.</p>
+                    <div class="service-line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PORTFOLIO ========== -->
+    <section id="portfolio">
+        <div class="container">
+            <h2 class="section-label reveal">Selected Work</h2>
+            <h1 class="sub-title reveal">My Portfolio</h1>
+
+            <div class="portfolio-filters reveal">
+                <button class="filter-btn active-filter" data-filter="ai-ml">AI / ML</button>
+                <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+                <button class="filter-btn" data-filter="systems">Systems &amp; Security</button>
+            </div>
+
+            <div class="work-list">
+                <div class="work reveal" id="project-hallucination" data-category="ai-ml">
+                    <div class="work-visual">
+                        <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram of a Java code window translating to C# with a flagged hallucinated line">
+                            <defs>
+                                <radialGradient id="glowHall" cx="20%" cy="20%" r="60%">
+                                    <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.35"/>
+                                    <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+                                </radialGradient>
+                                <linearGradient id="lineHall" x1="0" y1="0" x2="1" y2="0">
+                                    <stop offset="0%" stop-color="#7c3aed"/>
+                                    <stop offset="100%" stop-color="#a855f7"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="400" height="220" fill="#111118"/>
+                            <circle cx="80" cy="40" r="140" fill="url(#glowHall)"/>
+                            <rect x="28" y="46" width="150" height="128" rx="10" fill="#181822" stroke="rgba(124,58,237,0.4)"/>
+                            <circle cx="42" cy="60" r="3" fill="#f43f5e"/>
+                            <circle cx="52" cy="60" r="3" fill="#eab308"/>
+                            <circle cx="62" cy="60" r="3" fill="#22c55e"/>
+                            <text x="150" y="64" text-anchor="end" font-family="Inter,sans-serif" font-size="10" fill="#64748b">Java</text>
+                            <rect x="40" y="76" width="90" height="6" rx="3" fill="rgba(124,58,237,0.45)"/>
+                            <rect x="40" y="90" width="120" height="6" rx="3" fill="rgba(124,58,237,0.3)"/>
+                            <rect x="40" y="104" width="70" height="6" rx="3" fill="rgba(124,58,237,0.45)"/>
+                            <rect x="40" y="118" width="100" height="6" rx="3" fill="rgba(124,58,237,0.3)"/>
+                            <rect x="40" y="132" width="60" height="6" rx="3" fill="rgba(124,58,237,0.45)"/>
+                            <rect x="40" y="146" width="110" height="6" rx="3" fill="rgba(124,58,237,0.3)"/>
+                            <path d="M182 110 H222" stroke="url(#lineHall)" stroke-width="2.5" fill="none"/>
+                            <path d="M216 103 L226 110 L216 117" stroke="url(#lineHall)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <rect x="230" y="46" width="150" height="128" rx="10" fill="#181822" stroke="rgba(244,63,94,0.35)"/>
+                            <circle cx="244" cy="60" r="3" fill="#f43f5e"/>
+                            <circle cx="254" cy="60" r="3" fill="#eab308"/>
+                            <circle cx="264" cy="60" r="3" fill="#22c55e"/>
+                            <text x="352" y="64" text-anchor="end" font-family="Inter,sans-serif" font-size="10" fill="#64748b">C#</text>
+                            <rect x="242" y="76" width="85" height="6" rx="3" fill="rgba(124,58,237,0.3)"/>
+                            <rect x="242" y="90" width="115" height="6" rx="3" fill="rgba(124,58,237,0.3)"/>
+                            <rect x="240" y="102" width="126" height="12" rx="4" fill="rgba(244,63,94,0.15)" stroke="#f43f5e" stroke-width="1" stroke-dasharray="3 2"/>
+                            <rect x="242" y="104" width="65" height="6" rx="3" fill="#fb7185"/>
+                            <rect x="242" y="122" width="100" height="6" rx="3" fill="rgba(124,58,237,0.3)"/>
+                            <rect x="242" y="136" width="65" height="6" rx="3" fill="rgba(124,58,237,0.45)"/>
+                            <rect x="242" y="150" width="110" height="6" rx="3" fill="rgba(124,58,237,0.3)"/>
+                            <circle cx="350" cy="108" r="9" fill="none" stroke="#f43f5e" stroke-width="2"/>
+                            <line x1="356" y1="114" x2="364" y2="122" stroke="#f43f5e" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="layer">
+                        <h3>Hallucination Localization in Code Translation <span class="badge">Ongoing</span></h3>
+                        <p>Token-level system to pinpoint knowledge-conflicting hallucinations in LLM-generated Java→C# translations using entropy signals from StarCoder2. Building an annotated dataset labeled with exact line/token indices, evaluated with precision, recall &amp; Top-K accuracy.</p>
+                        <p class="layer-stack">Python · StarCoder2 · LLMs · Dataset Annotation</p>
+                        <a href="https://github.com/Likithprem22" target="_blank" rel="noopener" aria-label="View GitHub profile — repo not yet public">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="work reveal" id="project-fibrosis" data-category="ai-ml">
+                    <div class="work-visual">
+                        <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram of a clinical data network with an ECG line and a risk gauge reading 0.91 AUC">
+                            <defs>
+                                <radialGradient id="glowFib" cx="80%" cy="20%" r="60%">
+                                    <stop offset="0%" stop-color="#f43f5e" stop-opacity="0.3"/>
+                                    <stop offset="100%" stop-color="#f43f5e" stop-opacity="0"/>
+                                </radialGradient>
+                                <linearGradient id="organFib" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#7c3aed"/>
+                                    <stop offset="100%" stop-color="#f43f5e"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="400" height="220" fill="#111118"/>
+                            <circle cx="330" cy="40" r="150" fill="url(#glowFib)"/>
+                            <polyline points="20,180 60,180 72,150 84,200 96,120 108,180 140,180 152,165 164,180 400,180" fill="none" stroke="#fb7185" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+                            <path d="M110 60 C150 30,210 35,225 70 C245 100,220 130,180 135 C140 140,95 120,90 95 C87 80,90 68,110 60 Z" fill="url(#organFib)" opacity="0.28" stroke="url(#organFib)" stroke-width="2"/>
+                            <circle cx="130" cy="80" r="3" fill="#a855f7"/>
+                            <circle cx="165" cy="70" r="3" fill="#a855f7"/>
+                            <circle cx="190" cy="95" r="3" fill="#fb7185"/>
+                            <circle cx="150" cy="105" r="3" fill="#a855f7"/>
+                            <line x1="130" y1="80" x2="165" y2="70" stroke="rgba(168,85,247,0.5)" stroke-width="1"/>
+                            <line x1="165" y1="70" x2="190" y2="95" stroke="rgba(168,85,247,0.5)" stroke-width="1"/>
+                            <line x1="150" y1="105" x2="190" y2="95" stroke="rgba(168,85,247,0.5)" stroke-width="1"/>
+                            <line x1="130" y1="80" x2="150" y2="105" stroke="rgba(168,85,247,0.5)" stroke-width="1"/>
+                            <g transform="translate(320,140)">
+                                <path d="M -45 10 A 45 45 0 0 1 45 10" fill="none" stroke="rgba(148,163,184,0.25)" stroke-width="8" stroke-linecap="round"/>
+                                <path d="M -45 10 A 45 45 0 0 1 20 -38" fill="none" stroke="#f43f5e" stroke-width="8" stroke-linecap="round"/>
+                                <line x1="0" y1="10" x2="18" y2="-30" stroke="#f1f5f9" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="0" cy="10" r="4" fill="#f1f5f9"/>
+                                <text x="0" y="32" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="#cbd5e1">0.91 AUC</text>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="layer">
+                        <h3>Hepatic Fibrosis Risk Prediction</h3>
+                        <p>Multi-task deep learning model predicting hepatic fibrosis risk from EHR data, benchmarked against a nested XGBoost baseline on a 38,438-patient NAFLD cohort. Reached 81.90% sensitivity and 0.91 ROC-AUC on noisy clinical labels.</p>
+                        <p class="layer-stack">Python · PyTorch · XGBoost · Clinical Data</p>
+                        <a href="https://github.com/Likithprem22" target="_blank" rel="noopener" aria-label="View GitHub profile">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="work reveal" id="project-nitc-ams" data-category="fullstack">
+                    <div class="work-visual">
+                        <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram of a dashboard browser window with a bar chart, a checklist, and a seating grid">
+                            <defs>
+                                <linearGradient id="barNitc" x1="0" y1="1" x2="0" y2="0">
+                                    <stop offset="0%" stop-color="#7c3aed"/>
+                                    <stop offset="100%" stop-color="#a855f7"/>
+                                </linearGradient>
+                                <radialGradient id="glowNitc" cx="20%" cy="80%" r="60%">
+                                    <stop offset="0%" stop-color="#f43f5e" stop-opacity="0.25"/>
+                                    <stop offset="100%" stop-color="#f43f5e" stop-opacity="0"/>
+                                </radialGradient>
+                            </defs>
+                            <rect width="400" height="220" fill="#111118"/>
+                            <circle cx="60" cy="190" r="140" fill="url(#glowNitc)"/>
+                            <rect x="30" y="30" width="340" height="160" rx="10" fill="#181822" stroke="rgba(124,58,237,0.35)"/>
+                            <rect x="30" y="30" width="340" height="24" rx="10" fill="#1f1f2c"/>
+                            <circle cx="46" cy="42" r="3" fill="#f43f5e"/>
+                            <circle cx="56" cy="42" r="3" fill="#eab308"/>
+                            <circle cx="66" cy="42" r="3" fill="#22c55e"/>
+                            <rect x="90" y="37" width="180" height="10" rx="5" fill="rgba(148,163,184,0.15)"/>
+                            <rect x="55" y="120" width="18" height="45" rx="3" fill="url(#barNitc)"/>
+                            <rect x="80" y="100" width="18" height="65" rx="3" fill="url(#barNitc)" opacity="0.8"/>
+                            <rect x="105" y="135" width="18" height="30" rx="3" fill="url(#barNitc)" opacity="0.6"/>
+                            <rect x="130" y="90" width="18" height="75" rx="3" fill="url(#barNitc)"/>
+                            <rect x="180" y="95" width="12" height="12" rx="3" fill="none" stroke="#a855f7" stroke-width="1.5"/>
+                            <path d="M182 101 L186 105 L190 97" stroke="#22c55e" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <rect x="198" y="98" width="90" height="6" rx="3" fill="rgba(148,163,184,0.2)"/>
+                            <rect x="180" y="118" width="12" height="12" rx="3" fill="none" stroke="#a855f7" stroke-width="1.5"/>
+                            <path d="M182 124 L186 128 L190 120" stroke="#22c55e" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <rect x="198" y="121" width="70" height="6" rx="3" fill="rgba(148,163,184,0.2)"/>
+                            <rect x="180" y="141" width="12" height="12" rx="3" fill="none" stroke="rgba(148,163,184,0.4)" stroke-width="1.5"/>
+                            <rect x="198" y="144" width="80" height="6" rx="3" fill="rgba(148,163,184,0.2)"/>
+                            <g fill="rgba(168,85,247,0.35)" stroke="#a855f7" stroke-width="0.6">
+                                <rect x="300" y="95" width="14" height="14" rx="2"/>
+                                <rect x="318" y="95" width="14" height="14" rx="2"/>
+                                <rect x="336" y="95" width="14" height="14" rx="2"/>
+                                <rect x="300" y="113" width="14" height="14" rx="2" fill="rgba(244,63,94,0.35)" stroke="#f43f5e"/>
+                                <rect x="318" y="113" width="14" height="14" rx="2"/>
+                                <rect x="336" y="113" width="14" height="14" rx="2"/>
+                                <rect x="300" y="131" width="14" height="14" rx="2"/>
+                                <rect x="318" y="131" width="14" height="14" rx="2" fill="rgba(244,63,94,0.35)" stroke="#f43f5e"/>
+                                <rect x="336" y="131" width="14" height="14" rx="2"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="layer">
+                        <h3>NITC Assessment Management System</h3>
+                        <p>MERN platform for academic evaluations at NIT Calicut — NITC-email faculty auth, CSV/Excel bulk candidate &amp; evaluator import, random/manual evaluator mapping, auto seating arrangement, and score-entry dashboards.</p>
+                        <p class="layer-stack">React.js · Node.js · Express.js · MongoDB</p>
+                        <a href="https://github.com/Likithprem22/Assessment-Management-System" target="_blank" rel="noopener" aria-label="View NITC Assessment Management System on GitHub">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="work reveal" id="project-logsentinel" data-category="systems">
+                    <div class="work-visual">
+                        <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram of a terminal streaming severity-tagged log lines next to a shield badge">
+                            <defs>
+                                <radialGradient id="glowLog" cx="80%" cy="15%" r="60%">
+                                    <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.3"/>
+                                    <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+                                </radialGradient>
+                                <linearGradient id="shieldLog" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#a855f7"/>
+                                    <stop offset="100%" stop-color="#7c3aed"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="400" height="220" fill="#111118"/>
+                            <circle cx="340" cy="30" r="150" fill="url(#glowLog)"/>
+                            <rect x="28" y="34" width="290" height="152" rx="10" fill="#0d0d13" stroke="rgba(124,58,237,0.35)"/>
+                            <rect x="28" y="34" width="290" height="22" rx="10" fill="#181822"/>
+                            <circle cx="43" cy="45" r="3" fill="#f43f5e"/>
+                            <circle cx="53" cy="45" r="3" fill="#eab308"/>
+                            <circle cx="63" cy="45" r="3" fill="#22c55e"/>
+                            <g font-family="'Courier New', Courier, monospace" font-size="10">
+                                <circle cx="45" cy="72" r="3" fill="#22c55e"/>
+                                <text x="55" y="76" fill="#94a3b8">INFO  agent heartbeat ok</text>
+                                <circle cx="45" cy="92" r="3" fill="#22c55e"/>
+                                <text x="55" y="96" fill="#94a3b8">INFO  utility score 0.12</text>
+                                <circle cx="45" cy="112" r="3" fill="#eab308"/>
+                                <text x="55" y="116" fill="#cbd5e1">WARN  anomaly threshold near</text>
+                                <circle cx="45" cy="132" r="3" fill="#f43f5e"/>
+                                <text x="55" y="136" fill="#fecaca">ERROR spike detected: alert</text>
+                                <circle cx="45" cy="152" r="3" fill="#22c55e"/>
+                                <text x="55" y="156" fill="#94a3b8">INFO  alert dispatched</text>
+                            </g>
+                            <g transform="translate(348,108) scale(0.9)">
+                                <path d="M0 -35 L30 -22 V8 C30 30 15 42 0 48 C-15 42 -30 30 -30 8 V-22 Z" fill="url(#shieldLog)" opacity="0.9"/>
+                                <path d="M-13 5 L-3 15 L15 -8" stroke="#0a0a0f" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="layer">
+                        <h3>LogSentinel</h3>
+                        <p>Autonomous log-monitoring agent that uses utility-based reasoning over structured tool outputs to detect abnormal system behavior, with traceable step-by-step execution and severity-categorized alerts (INFO/WARN/ERROR).</p>
+                        <p class="layer-stack">Python · Intelligent Agent Design · Utility-Based Reasoning</p>
+                        <a href="https://github.com/Likithprem22/Logsentinal" target="_blank" rel="noopener" aria-label="View LogSentinel on GitHub">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="work reveal" id="project-privlab" data-category="systems">
+                    <div class="work-visual">
+                        <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram of a Docker container, Linux file permissions, and a GDB stack trace representing three layers of system privilege">
+                            <defs>
+                                <radialGradient id="glowSec" cx="50%" cy="10%" r="70%">
+                                    <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.3"/>
+                                    <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+                                </radialGradient>
+                            </defs>
+                            <rect width="400" height="220" fill="#111118"/>
+                            <circle cx="200" cy="20" r="160" fill="url(#glowSec)"/>
+                            <rect x="20" y="40" width="110" height="140" rx="10" fill="#181822" stroke="rgba(124,58,237,0.4)"/>
+                            <text x="75" y="58" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#64748b">docker</text>
+                            <rect x="38" y="70" width="74" height="50" rx="6" fill="rgba(124,58,237,0.15)" stroke="#a855f7" stroke-width="1.2"/>
+                            <rect x="48" y="80" width="18" height="14" rx="2" fill="rgba(168,85,247,0.5)"/>
+                            <rect x="70" y="80" width="18" height="14" rx="2" fill="rgba(168,85,247,0.3)"/>
+                            <rect x="48" y="98" width="40" height="10" rx="2" fill="rgba(168,85,247,0.35)"/>
+                            <g transform="translate(75,145)">
+                                <path d="M-9 -3 a9 9 0 0 1 18 0 v5 h-18z" fill="none" stroke="#22c55e" stroke-width="2"/>
+                                <rect x="-11" y="2" width="22" height="16" rx="2" fill="#0d0d13" stroke="#22c55e" stroke-width="2"/>
+                            </g>
+                            <text x="75" y="172" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#94a3b8">container user</text>
+                            <path d="M136 110 H154" stroke="#a855f7" stroke-width="2" fill="none"/>
+                            <path d="M148 104 L158 110 L148 116" stroke="#a855f7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <rect x="160" y="40" width="110" height="140" rx="10" fill="#181822" stroke="rgba(244,63,94,0.35)"/>
+                            <text x="215" y="58" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#64748b">chmod</text>
+                            <text x="182" y="100" font-family="'Courier New', Courier, monospace" font-size="13" fill="#94a3b8">-rwx</text>
+                            <text x="182" y="118" font-family="'Courier New', Courier, monospace" font-size="13" fill="#94a3b8">r-x</text>
+                            <text x="182" y="136" font-family="'Courier New', Courier, monospace" font-size="13" fill="#f43f5e">r-x</text>
+                            <circle cx="248" cy="132" r="5" fill="none" stroke="#f43f5e" stroke-width="1.5"/>
+                            <text x="215" y="160" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#fda4af">world-writable?</text>
+                            <path d="M276 110 H294" stroke="#a855f7" stroke-width="2" fill="none"/>
+                            <path d="M288 104 L298 110 L288 116" stroke="#a855f7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <rect x="300" y="40" width="80" height="140" rx="10" fill="#181822" stroke="rgba(124,58,237,0.4)"/>
+                            <text x="340" y="58" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#64748b">gdb</text>
+                            <rect x="312" y="68" width="56" height="16" rx="2" fill="rgba(148,163,184,0.15)"/>
+                            <rect x="312" y="88" width="56" height="16" rx="2" fill="rgba(148,163,184,0.15)"/>
+                            <rect x="312" y="108" width="56" height="16" rx="2" fill="rgba(244,63,94,0.2)" stroke="#f43f5e" stroke-width="1" stroke-dasharray="2 2"/>
+                            <text x="340" y="119" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#fecaca">ret addr</text>
+                            <text x="340" y="150" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#94a3b8">control-flow trace</text>
+                        </svg>
+                    </div>
+                    <div class="layer">
+                        <h3>System Privilege Security Lab</h3>
+                        <p>Explored how access and privilege are controlled across three system layers — container users in Docker, file permissions in Linux, and program control-flow in C. Set up isolated environments to test each layer, tracing execution to see how unchecked input could hijack a running program.</p>
+                        <p class="layer-stack">Docker · Linux · C · GDB · Bash</p>
+                        <a href="https://github.com/Likithprem22" target="_blank" rel="noopener" aria-label="View GitHub profile">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="work reveal" id="project-fatigue" data-category="ai-ml">
+                    <div class="work-visual">
+                        <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram of a car silhouette on a road with a facial-landmark scan detecting drowsiness">
+                            <defs>
+                                <radialGradient id="glowCar" cx="20%" cy="20%" r="60%">
+                                    <stop offset="0%" stop-color="#f43f5e" stop-opacity="0.3"/>
+                                    <stop offset="100%" stop-color="#f43f5e" stop-opacity="0"/>
+                                </radialGradient>
+                                <linearGradient id="carBody" x1="0" y1="0" x2="1" y2="0">
+                                    <stop offset="0%" stop-color="#f43f5e"/>
+                                    <stop offset="100%" stop-color="#fb7185"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="400" height="220" fill="#111118"/>
+                            <circle cx="70" cy="50" r="140" fill="url(#glowCar)"/>
+                            <line x1="0" y1="185" x2="400" y2="185" stroke="rgba(148,163,184,0.25)" stroke-width="2"/>
+                            <line x1="20" y1="185" x2="50" y2="185" stroke="#94a3b8" stroke-width="3" stroke-dasharray="14 10"/>
+                            <path d="M30 175 C30 160 45 150 65 150 L95 150 C105 135 130 128 155 128 L195 128 C210 128 220 138 225 150 L245 150 C258 150 268 160 268 175 Z" fill="url(#carBody)" opacity="0.85"/>
+                            <circle cx="75" cy="178" r="12" fill="#0a0a0f" stroke="#fb7185" stroke-width="2"/>
+                            <circle cx="225" cy="178" r="12" fill="#0a0a0f" stroke="#fb7185" stroke-width="2"/>
+                            <rect x="150" y="133" width="45" height="18" rx="4" fill="rgba(10,10,15,0.5)"/>
+                            <g transform="translate(320,72)">
+                                <circle r="42" fill="none" stroke="rgba(124,58,237,0.4)" stroke-width="1.5" stroke-dasharray="4 4"/>
+                                <circle r="30" fill="rgba(124,58,237,0.08)" stroke="#a855f7" stroke-width="1.5"/>
+                                <line x1="-18" y1="-3" x2="-4" y2="-5" stroke="#f1f5f9" stroke-width="2.4" stroke-linecap="round"/>
+                                <line x1="4" y1="-5" x2="18" y2="-3" stroke="#f1f5f9" stroke-width="2.4" stroke-linecap="round"/>
+                                <ellipse cx="0" cy="15" rx="7" ry="9" fill="#0a0a0f" stroke="#f1f5f9" stroke-width="1.5"/>
+                                <text x="24" y="-24" font-family="Inter,sans-serif" font-size="10" fill="#c4b5fd" font-weight="700">z</text>
+                                <text x="31" y="-33" font-family="Inter,sans-serif" font-size="13" fill="#c4b5fd" font-weight="700">Z</text>
+                                <text x="0" y="58" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#fda4af">drowsy cue detected</text>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="layer">
+                        <h3>Driver Fatigue Detection</h3>
+                        <p>Combines Local Binary Pattern (LBP) texture analysis with CNNs to detect driver fatigue cues like yawning from facial images, improving road safety.</p>
+                        <p class="layer-stack">Machine Learning · Deep Learning · LBP · CNN</p>
+                        <a href="https://github.com/Likithprem22/Driver-Fatigue" target="_blank" rel="noopener" aria-label="View Driver Fatigue Detection on GitHub">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-label reveal">Let's Talk</h2>
+            <h1 class="sub-title reveal">Contact Me</h1>
+            <div class="row">
+                <div class="contact-left reveal">
+                    <p><i class="fa-solid fa-paper-plane"></i>likithprem22@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>+91-9390573521</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/cheema-likith-prem/" target="_blank" rel="noopener" aria-label="LinkedIn" id="social-linkedin">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/Likithprem22" target="_blank" rel="noopener" aria-label="GitHub" id="social-github">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/likithprem22/" target="_blank" rel="noopener" aria-label="Instagram" id="social-instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                    <div class="resume-downloads">
+                        <a href="Resume.pdf" download class="btn btn-primary" id="resume-download-btn">
+                            <i class="fa-solid fa-download"></i> Resume — Software &amp; Security
+                        </a>
+                        <a href="Resume-MLEngineer.pdf" download class="btn btn-primary" id="resume-download-ml-btn">
+                            <i class="fa-solid fa-download"></i> Resume — ML / AI Engineer
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-right reveal">
+                    <form name="submit-to-google-sheet" id="contact-form">
+                        <input type="text" name="Name" placeholder="Your Name" required id="form-name">
+                        <input type="email" name="email" placeholder="Your Email" required id="form-email">
+                        <textarea name="Message" rows="6" placeholder="Your Message" id="form-message"></textarea>
+                        <button type="submit" class="btn btn-primary" id="form-submit-btn">
+                            <i class="fa-solid fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <p>Designed & Built by <span>Likith Prem</span> · © <span id="year"></span></p>
+            <p class="footer-sub">Made with ❤️ in Hyderabad</p>
+        </div>
+    </footer>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script>
+        // ── Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // ── Tab switcher
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname, el) {
+            for (var tablink of tablinks) tablink.classList.remove("active-link");
+            for (var tabcontent of tabcontents) tabcontent.classList.remove("active-tab");
+            el.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        // ── Mobile menu
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu() { sidemenu.style.right = "0"; }
+        function closemenu() { sidemenu.style.right = "-250px"; }
+
+        // ── Nav glass state + scroll progress bar
+        const siteNav = document.getElementById('site-nav');
+        const progressBar = document.getElementById('scroll-progress');
+        window.addEventListener('scroll', () => {
+            siteNav.classList.toggle('nav-scrolled', window.scrollY > 40);
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const pct = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
+            if (progressBar) progressBar.style.width = pct + '%';
+        }, { passive: true });
+
+        // ── Mouse-parallax hero blobs
+        const blobs = document.querySelectorAll('.blob');
+        document.getElementById('header').addEventListener('mousemove', (e) => {
+            const x = (e.clientX / window.innerWidth - 0.5) * 2;
+            const y = (e.clientY / window.innerHeight - 0.5) * 2;
+            blobs.forEach((blob, i) => {
+                const strength = (i + 1) * 10;
+                blob.style.transform = `translate(${x * strength}px, ${y * strength}px)`;
+            });
+        });
+
+        // ── Cursor-spotlight + 3D tilt on cards
+        const tiltCards = document.querySelectorAll('.service-card, .work');
+        const glowCards = document.querySelectorAll('.service-card, .work, .achieve-card, .timeline-item');
+        glowCards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const mx = e.clientX - rect.left;
+                const my = e.clientY - rect.top;
+                card.style.setProperty('--mx', mx + 'px');
+                card.style.setProperty('--my', my + 'px');
+                if (tiltCards.length && [...tiltCards].includes(card)) {
+                    const px = (mx / rect.width) - 0.5;
+                    const py = (my / rect.height) - 0.5;
+                    const lift = card.classList.contains('work') ? -6 : -8;
+                    card.style.transform = `translateY(${lift}px) rotateX(${(-py * 6).toFixed(2)}deg) rotateY(${(px * 6).toFixed(2)}deg)`;
+                }
+            });
+            card.addEventListener('mouseleave', () => {
+                if (tiltCards.length && [...tiltCards].includes(card)) card.style.transform = '';
+            });
+        });
+
+        // ── Animated count-up stats
+        const countEls = document.querySelectorAll('[data-count-to]');
+        const countObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                const el = entry.target;
+                const target = parseFloat(el.getAttribute('data-count-to'));
+                const decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+                const suffix = el.getAttribute('data-suffix') || '';
+                const duration = 1400;
+                const start = performance.now();
+                function tick(now) {
+                    const progress = Math.min((now - start) / duration, 1);
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    const value = target * eased;
+                    el.textContent = value.toFixed(decimals) + suffix;
+                    if (progress < 1) requestAnimationFrame(tick);
+                    else el.textContent = target.toFixed(decimals) + suffix;
+                }
+                requestAnimationFrame(tick);
+                countObserver.unobserve(el);
+            });
+        }, { threshold: 0.4 });
+        countEls.forEach(el => countObserver.observe(el));
+
+        // ── Typing effect for role
+        const roles = ["Full-Stack Developer", "ML / AI Engineer", "Systems Security Enthusiast", "Software Engineer"];
+        let roleIndex = 0, charIndex = 0, isDeleting = false;
+        function typeRole() {
+            const el = document.getElementById("typed-role");
+            const current = roles[roleIndex];
+            if (isDeleting) {
+                el.textContent = current.substring(0, charIndex--);
+            } else {
+                el.textContent = current.substring(0, charIndex++);
+            }
+            if (!isDeleting && charIndex === current.length + 1) {
+                isDeleting = true;
+                setTimeout(typeRole, 1800);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+                setTimeout(typeRole, 400);
+            } else {
+                setTimeout(typeRole, isDeleting ? 60 : 100);
+            }
+        }
+        typeRole();
+
+        // ── Portfolio filter
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const workItems = document.querySelectorAll('.work');
+        function applyFilter(filter) {
+            workItems.forEach(item => {
+                const cats = (item.getAttribute('data-category') || '').split(' ');
+                item.style.display = cats.includes(filter) ? '' : 'none';
+            });
+        }
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active-filter'));
+                btn.classList.add('active-filter');
+                applyFilter(btn.getAttribute('data-filter'));
+            });
+        });
+        applyFilter('ai-ml');
+
+        // ── Skills category hover/click
+        const skillCats = document.querySelectorAll('.skill-cat');
+        const skillPanels = document.querySelectorAll('.skill-panel');
+        function activateSkillCat(cat) {
+            skillCats.forEach(c => c.classList.remove('active-cat'));
+            cat.classList.add('active-cat');
+            const target = cat.getAttribute('data-skill-cat');
+            skillPanels.forEach(p => {
+                p.classList.toggle('active-skill-panel', p.getAttribute('data-panel') === target);
+            });
+        }
+        skillCats.forEach(cat => {
+            cat.addEventListener('mouseenter', () => activateSkillCat(cat));
+            cat.addEventListener('click', () => activateSkillCat(cat));
+        });
+
+        // ── Scroll reveal
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+        reveals.forEach(el => observer.observe(el));
+
+        // ── Active nav link on scroll
+        const sections = document.querySelectorAll('header, section');
+        const navLinks = document.querySelectorAll('nav ul li a');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(sec => {
+                if (window.scrollY >= sec.offsetTop - 120) current = sec.id;
+            });
+            navLinks.forEach(a => {
+                a.classList.remove('active-nav');
+                if (a.getAttribute('href') === '#' + current) a.classList.add('active-nav');
+            });
+        });
+
+        // ── Contact form → Google Sheets
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwLRr-toglvDGui-hC7Mgb5IeVQiVKmp1J4BWBomZc_WEASEVz33Jfh1xf89oc_VymQ/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const msgEl = document.getElementById("msg");
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(() => {
+                    msgEl.innerHTML = "✓ Message sent successfully!";
+                    msgEl.classList.add('msg-success');
+                    setTimeout(() => { msgEl.innerHTML = ""; msgEl.classList.remove('msg-success'); }, 5000);
+                    form.reset();
+                })
+                .catch(err => {
+                    msgEl.innerHTML = "✗ Something went wrong. Please try again.";
+                    console.error('Error:', err.message);
+                });
+        });
+    </script>
+</body>
+</html>
