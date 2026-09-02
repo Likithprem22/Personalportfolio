@@ -231,13 +231,18 @@ body::before {
     will-change: transform;
 }
 
-/* Stagger children of grids as their parent row reveals */
-.services-list .service-card:nth-child(1), .work-list .work:nth-child(1), .achievements-grid .achieve-card:nth-child(1) { transition-delay: 0s; }
-.services-list .service-card:nth-child(2), .work-list .work:nth-child(2), .achievements-grid .achieve-card:nth-child(2) { transition-delay: 0.08s; }
-.services-list .service-card:nth-child(3), .work-list .work:nth-child(3), .achievements-grid .achieve-card:nth-child(3) { transition-delay: 0.16s; }
-.services-list .service-card:nth-child(4), .work-list .work:nth-child(4), .achievements-grid .achieve-card:nth-child(4) { transition-delay: 0.24s; }
-.services-list .service-card:nth-child(5), .work-list .work:nth-child(5) { transition-delay: 0.32s; }
-.work-list .work:nth-child(6) { transition-delay: 0.4s; }
+/* Grid entrance stagger is handled by GSAP ScrollTrigger.batch in JS (falls back to
+   simultaneous reveal via the plain IntersectionObserver path if GSAP fails to load) */
+
+/* ── Scroll-depth wrapper for hero blobs (keeps float + mouse-parallax on .blob untouched;
+   GSAP applies scroll-linked parallax to this outer layer) ── */
+.blob-parallax {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    will-change: transform;
+}
 
 /* ============================================================
    HEADER / HERO

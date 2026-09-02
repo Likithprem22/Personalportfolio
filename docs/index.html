@@ -13,8 +13,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="C (1).png">
-    <link rel="apple-touch-icon" href="C (1).png">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f43f5e'/%3E%3Cstop offset='1' stop-color='%237c3aed'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%230b0b14'/%3E%3Ctext x='32' y='46' font-family='Arial,Helvetica,sans-serif' font-weight='800' font-size='40' text-anchor='middle' fill='url(%23g)'%3EL%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f43f5e'/%3E%3Cstop offset='1' stop-color='%237c3aed'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%230b0b14'/%3E%3Ctext x='32' y='46' font-family='Arial,Helvetica,sans-serif' font-weight='800' font-size='40' text-anchor='middle' fill='url(%23g)'%3EL%3C/text%3E%3C/svg%3E">
     <meta property="og:image" content="mypic.jpg">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
@@ -22,15 +22,17 @@
     <meta name="twitter:description" content="Full-stack developer, applied ML engineer & systems security enthusiast — React.js, Node.js, Java, PyTorch, Docker.">
     <meta name="twitter:image" content="mypic.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
     <div id="scroll-progress"></div>
 
     <!-- ========== HERO / HEADER ========== -->
     <header id="header">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
+        <div class="blob-parallax blob-parallax-1"><div class="blob blob-1"></div></div>
+        <div class="blob-parallax blob-parallax-2"><div class="blob blob-2"></div></div>
+        <div class="blob-parallax blob-parallax-3"><div class="blob blob-3"></div></div>
 
         <nav id="site-nav">
             <div class="nav-inner">
@@ -755,17 +757,59 @@
             cat.addEventListener('click', () => activateSkillCat(cat));
         });
 
-        // ── Scroll reveal
-        const reveals = document.querySelectorAll('.reveal');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
+        // ── Scroll reveal + hero depth parallax (GSAP-powered, with a plain fallback
+        //     if the CDN scripts fail to load so content never stays stuck hidden)
+        if (window.gsap && window.ScrollTrigger) {
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Cinematic staggered entrance for cards/sections as groups scroll into view
+            ScrollTrigger.batch('.reveal', {
+                start: 'top 88%',
+                once: true,
+                onEnter: batch => {
+                    batch.forEach((el, i) => {
+                        gsap.delayedCall(i * 0.09, () => el.classList.add('visible'));
+                    });
                 }
             });
-        }, { threshold: 0.12 });
-        reveals.forEach(el => observer.observe(el));
+
+            // Hero depth: blobs drift apart at different speeds as you scroll past
+            gsap.to('.blob-parallax-1', {
+                yPercent: 35, xPercent: -6, ease: 'none',
+                scrollTrigger: { trigger: '#header', start: 'top top', end: 'bottom top', scrub: 0.6 }
+            });
+            gsap.to('.blob-parallax-2', {
+                yPercent: 50, xPercent: 8, ease: 'none',
+                scrollTrigger: { trigger: '#header', start: 'top top', end: 'bottom top', scrub: 0.9 }
+            });
+            gsap.to('.blob-parallax-3', {
+                yPercent: 65, xPercent: -10, ease: 'none',
+                scrollTrigger: { trigger: '#header', start: 'top top', end: 'bottom top', scrub: 1.2 }
+            });
+
+            // Hero text rises and fades slightly faster than the background as you scroll
+            gsap.to('.header-text', {
+                yPercent: -22, opacity: 0.25, ease: 'none',
+                scrollTrigger: { trigger: '#header', start: 'top top', end: 'bottom top', scrub: 0.6 }
+            });
+
+            // Scroll indicator fades out immediately once scrolling starts
+            gsap.to('.scroll-indicator', {
+                opacity: 0, ease: 'none',
+                scrollTrigger: { trigger: '#header', start: 'top top', end: '15% top', scrub: true }
+            });
+        } else {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+            reveals.forEach(el => observer.observe(el));
+        }
 
         // ── Active nav link on scroll
         const sections = document.querySelectorAll('header, section');
